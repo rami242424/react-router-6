@@ -6,6 +6,7 @@ import NotFound from "./screens/NotFound";
 import ErrorComponent from "./components/ErrorComponent";
 import App from "./App";
 import User from "./screens/users/Users";
+import Follower from "./screens/users/Follower";
 
 // function Router(){
 //     return (
@@ -38,7 +39,13 @@ const router = createBrowserRouter([
 
             {
                 path: "users/:key",
-                element: <User />
+                element: <User />,
+                children: [
+                    {
+                        path:"follower",
+                        element: <Follower />,
+                    }
+                ]
             }
         ],
         errorElement: <NotFound/> //라우트 에러뿐 아니라 컴포넌트 내부 JS 에러도 잡음
