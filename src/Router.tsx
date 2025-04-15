@@ -33,7 +33,6 @@ const router = createBrowserRouter([
             {
                 path:"about",
                 element: <About />,
-                errorElement: <ErrorComponent />
             }
         ],
         errorElement: <NotFound/> //라우트 에러뿐 아니라 컴포넌트 내부 JS 에러도 잡음
