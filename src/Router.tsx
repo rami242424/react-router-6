@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Home from './screens/Home';
 import About from "./screens/About";
 import Root from "./Root";
+import NotFound from "./screens/NotFound";
+import ErrorComponent from "./components/ErrorComponent";
 
 // function Router(){
 //     return (
@@ -15,7 +17,7 @@ import Root from "./Root";
 //         </BrowserRouter>
 //     );
 // }
-
+// export default Router;
 
 const router = createBrowserRouter([
     {
@@ -25,13 +27,16 @@ const router = createBrowserRouter([
             {
                 path:"",
                 element: <Home />,
+                errorElement: <ErrorComponent />
             },
 
             {
                 path:"about",
-                element: <About />
+                element: <About />,
+                errorElement: <ErrorComponent />
             }
-        ]
+        ],
+        errorElement: <NotFound/> //라우트 에러뿐 아니라 컴포넌트 내부 JS 에러도 잡음
     }
 ]);
 

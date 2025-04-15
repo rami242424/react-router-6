@@ -7,8 +7,8 @@ import Header from "./components/Header";
 function Root() {
   return (
     <div>
-      <Header/>
-      <Outlet/>
+      <Header />
+      <Outlet />
       <footer>made by rami</footer>
     </div>
     );
