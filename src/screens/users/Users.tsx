@@ -13,7 +13,10 @@ function User(){
             </h1>
             <hr />
             <Link to="follower">See {users[Number(key) - 1].name}'s Followers</Link>
-            <Outlet />
+            <Outlet context={{
+                nameOfMyUser : users[Number(key) - 1].name,
+                
+            }}/>
         </>
     )
 }
