@@ -6,7 +6,7 @@ import About from "./screens/About";
 function Router(){
     return (
         <BrowserRouter>
-            <Header />
+            
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />}/>
