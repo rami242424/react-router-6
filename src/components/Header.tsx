@@ -12,8 +12,8 @@ function Header(){
                     <Link to={"/"}>Home</Link>
                 </li>
                 <li>
-                    {/* <Link to={"/about"}>About</Link> */}
-                    <button onClick={onAboutClick}>About</button>
+                    <Link to={"/about"}>About</Link>
+                    {/* <button onClick={onAboutClick}>About</button> */}
                 </li>
             </ul>
         </header>
