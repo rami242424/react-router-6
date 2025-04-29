@@ -1,6 +1,10 @@
 function Home(){
+    const users:any = [];
     return (
-        <div>Home</div>
+        <div>
+            Home
+            {users[0].name}
+        </div>
     );
 }
 
