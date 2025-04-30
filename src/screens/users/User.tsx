@@ -1,8 +1,9 @@
-import { Outlet, useParams } from "react-router-dom";
+import { Outlet, useOutletContext, useParams } from "react-router-dom";
 import { users } from "../db";
 import { Link } from "react-router-dom";
 
 function User(){
+    console.log(useOutletContext(), "다크모드정보");
     // const params = useParams();
     // console.log(params);
     const { userId } = useParams();
@@ -14,7 +15,10 @@ function User(){
             <hr />
             <Link to="followers">See followers</Link>
 
-            <Outlet />
+            <Outlet 
+                context={{
+                    nameOfMyUsers : users[Number(userId)-1].name
+            }}/>
         </div>
     );
 }
